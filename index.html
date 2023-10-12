@@ -23,8 +23,9 @@
 </head>
 <!-- style&script -->
 <script>
+    
     tailwind.config = {
-    darkMode:"class",
+        darkMode:"class",
       theme: {
         extend: {
             spacing: {
@@ -40,22 +41,54 @@
     }
   </script>
 <style type="text/tailwindcss">
+    bod,html {
+        scroll-behavior: smooth;
+    }
     #icon {
     font-size: 25px; 
     }
+    .yaya{
+        padding-top: 900px;
+    }
+    .group1 {
+    background: rgba(255, 255, 255, 0.209); /* Transparansi 20% dengan RGBA */
+    backdrop-filter: blur(5px); /* Efek blur dengan jarak blur 5px (sesuaikan dengan preferensi Anda) */
+}
+    .saran {
+    color: rgb(0, 0, 0);
+}
+        .komentar-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .komentar {
+            width: calc(30% - 20px); /* Mengatur 4 kolom */
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: white; /* Atur warna latar belakang sesuai kebutuhan */
+            z-index: 1000; /* Atur z-index agar elemen 'nav' tetap di atas konten lainnya */
+        }
 </style>
 <!-- Bagian 1: Header -->
-<body> 
-    <div class="cursor-auto bg-gradient-to-r font-pc text-white from-indigo-400 to-blue-700 dark:from-black dark:text-yellow-600 dark:to-indigo-950">
-    <nav class="bg-gradient-to-r from-indigo-700 to-blue-700 backdrop-blur-md shadow-lg py-4 dark:from-black dark:text-yellow-600 dark:to-indigo-950">
+<body>
+    <div class=" cursor-auto bg-gradient-to-r font-pc text-white from-indigo-400 to-blue-700 dark:from-black dark:text-yellow-600 dark:to-indigo-950">
+    <nav class="bg-gradient-to-r from-indigo-700 to-blue-700 shadow-lg py-4 dark:from-black dark:text-yellow-600 dark:to-indigo-950">
         <div class="container mx-auto">
             <div class="flex justify-between items-center dark:text-yellow-600 ">
                 <h1 class="text-3xl text-white font-preconec  dark:text-yellow-600 pl-2">NAXZY STUDIO</h1>
-                <ul class="flex space-x-4 pr-2">
-                    <li class="text-[20px] text-white dark:text-yellow-600"><a href="#" class="hover:underline">Beranda</a></li>
-                    <li class="text-[20px] text-white dark:text-yellow-600"><a href="#" class="hover:underline">Tentang Kami</a></li>
-                    <li class="text-[20px] text-white dark:text-yellow-600"><a href="#" class="hover:underline">Layanan</a></li>
-                    <li class="text-[20px] text-white dark:text-yellow-600"><a href="#" class="hover:underline">Kontak</a></li>
+                <ul id="dinav" class="flex space-x-4 pr-2">
+                    <li class="text-[20px] text-white dark:text-yellow-600"><a href="#home" class="hover:underline">Beranda</a></li>
+                    <li class="text-[20px] text-white dark:text-yellow-600"><a href="#tk" class="hover:underline">Tentang Kami</a></li>
+                    <li class="text-[20px] text-white dark:text-yellow-600"><a href="#haha" class="hover:underline">Layanan</a></li>
+                    <li class="text-[20px] text-white dark:text-yellow-600"><a href="#kt" class="hover:underline">Komentar</a></li>
                     <button id="darkModeButton" onclick="toggleDarkMode()">
                         <i id="icon" class="fas fa-sun"></i> 
                     </button>
@@ -64,75 +97,180 @@
             </div>
         </div>
     </nav>
-    
+  
     <!-- Bagian 2: inti-->
     <!-- selector 1 -->
-    <section class="py-12 flex ">
-        <div class="container mx-11 m">
-            <img src="./img/ns.png" class="filter invert-0 dark:filter dark:invert w-56 h-56 float-right mr-32">
-            <h2 class="text-5xl font-preconec  font-semibold ml-16">NAXZY STUDIO</h2>
-            <p class=" mt-4 pt-4 text-2xl w-1/2 float-left ml-20">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quia, expedita molestiae ex natus magni saepe. Perferendis aliquam labore nobis.</p>
-            
-        </div>
-        <!-- selector 2 -->
-    </section>
-    <div class="flex justify-center mx-auto text-indigo-950  dark:text-yellow-600 ">
-        <section class="group relative transform hover:scale-110 bg-gradient-to-br from-purple-400 to-pink-400 dark:from-purple-800  dark:to-black py-8 pl-6 m-4 w-72 h-56 rounded-3xl shadow-2xl dark:shadow-slate-950 ">
-            <div class="container mx-auto">
-                <h2 class="text-2xl  font-semibold">Kenapa harus pilih kami? </h2>
-                <ul class="mt-4  list-inside list-disc">
-                    <li>Pengerjaan yang cepat</li>
-                <li>Menerima segala masukan</li>
-                <li>Mampu mengerjakan dengan cepat</li>
-            </ul>
+    <section id="home" class="py-12 flex ">
+        <div class="container mx-11 mr-32 mb-44 ">
+            <img src="./img/ns.png" class="pt-24 filter invert-0 dark:filter dark:invert w-56 h-70 float-right ">
+            <h2 class=" pt-24 text-5xl font-preconec  font-semibold ml-16">NAXZY STUDIO</h2>
+            <p class=" mt-4 pt-6 text-2xl w-1/2 float-left ml-20 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nisi saepe dolorum dignissimos a ullam magnam eius, accusantium minus temporibus, odit assumenda rem similique neque porro recusandae aut fugit eaque? ipsum dolor sit amet consectetur adipisicing elit. Deserunt quia, expedita molestiae ex natus magni saepe. Perferendis aliquam labore nobis.</p>
         </div>
     </section>
-    <!-- selector 3 -->
-    <section class="group relative transform hover:scale-110 bg-gradient-to-tl from-cyan-500 to-green-300 dark:from-blue-900  dark:to-black py-8 pl-6 m-4 w-72 h-56 rounded-3xl shadow-2xl dark:shadow-slate-950">
-        <div class="container mx-auto">
-            <h2 class="text-2xl font-semibold">Keunggulan yang kami miliki</h2>
-            <ul class="mt-4  list-inside list-disc">
-                <li>Responsif</li>
-                <li>Optimisasi yang baik</li>
-                <li>Lebih cepat dan murah</li>
-            </ul>
+    <!-- tentang kami -->
+    <div id="tk" class="card flex mx-auto px-48 pt-28 text-white dark:text-yellow-600 mb-44">
+        <section class="group1  dark:bg-indigo-950  absolute justify-center pl-10 transform w-[1200px] h-[600px] rounded-2xl shadow-2xl">
+          <div class="container  mx-auto">
+            <img src="./img/ns.png" class="pt-44 pr-10 filter invert-0 dark:filter dark:invert w-60 h-90 float-right">
+            <h2 class="text-7xl pt-60 float-left font-preconec font-semibold">Tentang Kami</h2>
+            <p class="text-2xl float-left pb-20 mr-80 pt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut sunt unde eius illum officiis omnis quibusdam, architecto neque. Provident nemo error, nisi reprehenderit a officia quisquam asperiores cum mollitia velit.</p> 
         </div>
-    </section>
-    <!-- selector 4 -->
-    <section class="group relative transform hover:scale-110 bg-gradient-to-bl from-pink-500 dark:from-fuchsia-600  dark:to-black py-8 pl-6 m-4 w-72 h-56 rounded-3xl shadow-2xl dark:shadow-slate-950">
-        <div class="container mx-auto ">
-            <h2 class="text-2xl font-semibold">Layanan Kami</h2>
-            <ul class="mt-4  list-inside list-disc">
-                <li>Pengembangan Web</li>
-                <li>Desain Grafis</li>
-                <li>Konsultasi Bisnis</li>
-            </ul>
-        </div>
-    </section>
-    <!-- selector 5 -->
-    <section class="group relative transform hover:scale-110 bg-gradient-to-br from-cyan-500 to-indigo-800 dark:from-black  dark:to-indigo-950 py-8 pl-6 m-4 w-72 h-56 rounded-3xl shadow-2xl dark:shadow-slate-950">
-        <div class="container mx-auto">
-            <h2 class="text-2xl font-semibold">Kontak Kami</h2>
-            <ul class="mt-4  list-inside list-disc">
-                <li><a href="#" class="hover:text-green-500">Whatsapp</a></li>
-                <li><a href="#" class="hover:text-blue-500">Facebook</a></li>
-                <li><a href="#" class="hover:text-purple-600">Instaghram</a></li>
-            </ul>
-        </div>
-    </section>
-    </div>
-    <!-- Bagian 5: Kontak -->
-    <!-- selector 6 -->
-    <section class="bg-gradient-to-r font-preconec border-t mt-20 bg-gray-200 py-28 pt-2 text-center dark:from-black dark:text-yellow-600 dark:to-indigo-950">
-        <div class="container mx-auto">
-
-          <div class="mt-10">
-            <h2 class="text-2xl font-semibold">&copy; Hanafi Febriansyah | 2023 | Indonesia</h2>
+        </section>
+      </div>
+      <div class="mx-auto w-1/2  mb-8"></div>
+      <!-- Bagian 5: Kontak -->
+      <!-- selector 2 -->
+      <div class="yaya flex justify-center mx-auto text-indigo-950 my-96 dark:text-yellow-600 pt-96 ">
+        <div id="haha" class=" border-cyan-300 border-0 absolute w-80 h-[600px] m-[-250px]"></div>
+          <section  class="group relative transform hover:scale-110 bg-gradient-to-br from-purple-400 to-pink-400 dark:from-purple-800 pt-20 dark:to-black py-8 pl-10 m-4 w-1/4 h-72 rounded-3xl shadow-2xl dark:shadow-slate-950 ">
+              <div class="container mx-auto">
+                  <h2 class="text-2xl  font-semibold">Kenapa harus pilih kami? </h2>
+                  <ul class="mt-4 text-1xl list-inside list-disc">
+                      <li>Pengerjaan yang cepat</li>
+                  <li>Menerima segala masukan</li>
+                  <li>Mampu mengerjakan dengan cepat</li>
+              </ul>
           </div>
+      </section>
+      <!-- selector 3 -->
+      <section class="group relative transform hover:scale-110 bg-gradient-to-tl from-cyan-500 to-green-300 dark:from-blue-900 pt-20 dark:to-black py-8 pl-10 m-4 w-1/4 h-72 rounded-3xl shadow-2xl dark:shadow-slate-950">
+          <div class="container mx-auto">
+              <h2 class="text-2xl font-semibold">Keunggulan yang kami miliki</h2>
+              <ul class="mt-4 text-1xl list-inside list-disc">
+                  <li>Responsif</li>
+                  <li>Optimisasi yang baik</li>
+                  <li>Lebih cepat dan murah</li>
+              </ul>
+          </div>
+      </section>
+      <!-- selector 4 -->
+      <section class="group relative transform hover:scale-110 bg-gradient-to-bl from-pink-500 dark:from-fuchsia-600 pt-20 dark:to-black py-8 pl-10 m-4 w-1/4 rounded-3xl shadow-2xl dark:shadow-slate-950">
+          <div class="container mx-auto ">
+              <h2 class="text-2xl font-semibold">Layanan Kami</h2>
+              <ul class="mt-4 text-1xl list-inside list-disc">
+                  <li>Pengembangan Web</li>
+                  <li>Desain Grafis</li>
+                  <li>Konsultasi Bisnis</li>
+              </ul>
+          </div>
+      </section>
+      <!-- selector 5 -->
+      <section class="group relative transform hover:scale-110 bg-gradient-to-br from-cyan-500 to-indigo-800 pt-20   dark:from-black  darkpt-20:to-indigo-950 py-8 pl-10 m-4 w-1/4 rounded-3xl shadow-2xl dark:shadow-slate-950">
+          <div class="container mx-auto">
+              <h2 class="text-2xl font-semibold">Kontak Kami</h2>
+              <ul class="mt-4 text-1xl list-inside list-disc">
+                  <li><a href="#" class="hover:text-green-500">Whatsapp</a></li>
+                  <li><a href="#" class="hover:text-blue-500">Facebook</a></li>
+                  <li><a href="#" class="hover:text-purple-600">Instaghram</a></li>
+              </ul>
+          </div>
+      </section>
+      </div>
+      <!-- <section>
+        <div class="container mx-auto bg-gradient-to-br from-purple-600 to-indigo-500 w-[1300px] h-[600px] m-[-250px] p-5 rounded-xl shadow-xl  ">
+            <div class="mt-10">
+                <div class="float-left">
+                    <h1 class="pl-10 pt-14 text-3xl font-semibold absolute">KEAHLIAN YANG KITA MILIKI</h1>
+                    <div class="relative text-9xl py-32 pl-20">
+                        <i class="fa-duotone fa-code fa-2xl" style="--fa-primary-color: #1b1c1d; --fa-secondary-color: #0557e6;"></i>
+                    </div>
+                </div>
+                <div class="pl-[70%] float-none justify-center items-center ">
+                     
+                    <div class="group relative w-[20%] hover:w-1/2 pb-3 hover:py-3 ">
+                        <h2 class="pl-3 text-3xl">HTML</h2>
+                        <div class="bg-blue-500 text-center text-white p-4 rounded-md transition-transform transform hover:scale-105 hover:shadow-md">
+                            <i class="fab fa-html5 text-3xl"></i>
+                        </div>
+                        <div class=" rounded-b-lg top-0 left-0 right-0 bottom-0 bg-blue-500 bg-opacity-70 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <p class="text-2xl">90% Menguasai</p>
+                        </div>
+                    </div>
+    
+                    
+                    <div class="group relative w-1/5 hover:w-1/2 pb-3 hover:py-3">
+                        <h2 class="pl-3 text-3xl">CSS</h2>
+                        <div class="text-center bg-green-500 text-white p-4 rounded-md transition-transform transform hover:scale-105 hover:shadow-md">
+                            <i class="fab fa-css3 text-3xl"></i>
+                        </div>
+                        <div class="rounded-b-lg top-0 left-0 right-0 bottom-0 bg-green-500 bg-opacity-70 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <p class="text-2xl">80% Menguasai</p>
+                        </div>
+                    </div>
+                    <div class="group relative w-1/5 hover:w-1/2 pb-3 hover:py-3">
+                        <h2 class="pl-3 text-3xl">TailwindCss<h2>
+                        <div class="text-center bg-red-500 text-white p-4 rounded-md transition-transform transform hover:scale-105 hover:shadow-md">
+                            <i class="fa-solid fa-water fa-bounce text-3xl"></i>
+                        </div>
+                        <div class=" rounded-b-lg top-0 left-0 right-0 bottom-0 bg-red-500 bg-opacity-70 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <p class="text-2xl">50% Menguasai</p>
+                        </div>
+                    </div>
+      </section> -->
+      <!-- selector 6 -->
+      
+
+      <section>
+        <div id="kt" class=" border-cyan-300 border-0 absolute w-80 h-[600px] m-[-250px]"></div>
+        <div  class="container mx-auto p-6 mt-96">
+            <h1 class="text-3xl font-semibold mb-4"></h1>
+            <div class="komentar-container items-center pl-20 ">
+                <!-- Komentar 1 -->
+                <div class="komentar bg-white dark:bg-slate-800  p-2 rounded-md shadow-md max-w-lg">
+                    <p class="text-blue-500 dark:text-purple-600 font-semibold mt-2">John Doe</p>
+                    <p class="text-gray-800 dark:text-yellow-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet ipsum ac libero condimentum mattis.</p>
+                </div>
+                <div class="komentar bg-white dark:bg-slate-800  p-2 rounded-md shadow-md max-w-lg">
+                    <p class="text-blue-500 dark:text-purple-600 font-semibold mt-2">John Doe</p>
+                    <p class="text-gray-800 dark:text-yellow-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet ipsum ac libero condimentum mattis.</p>
+                </div>
+                <div class="komentar bg-white dark:bg-slate-800  p-2 rounded-md shadow-md max-w-lg">
+                    <p class="text-blue-500 dark:text-purple-600 font-semibold mt-2">John Doe</p>
+                    <p class="text-gray-800 dark:text-yellow-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet ipsum ac libero condimentum mattis.</p>
+                </div>
+                <div class="komentar bg-white dark:bg-slate-800  p-2 rounded-md shadow-md max-w-lg">
+                    <p class="text-blue-500 dark:text-purple-600 font-semibold mt-2">John Doe</p>
+                    <p class="text-gray-800 dark:text-yellow-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet ipsum ac libero condimentum mattis.</p>
+                </div>
+                <div class="komentar bg-white dark:bg-slate-800  p-2 rounded-md shadow-md max-w-lg">
+                    <p class="text-blue-500 dark:text-purple-600 font-semibold mt-2">John Doe</p>
+                    <p class="text-gray-800 dark:text-yellow-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet ipsum ac libero condimentum mattis.</p>
+                </div>
+                <div class="komentar bg-white dark:bg-slate-800  p-2 rounded-md shadow-md max-w-lg">
+                    <p class="text-blue-500 dark:text-purple-600 font-semibold mt-2">John Doe</p>
+                    <p class="text-gray-800 dark:text-yellow-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet ipsum ac libero condimentum mattis.</p>
+                </div>
+                
+            </div>
         </div>
       </section>
-    </div>
-    </body>
+      <section class="px-16 flex mt-96 bg-gradient-to-r font-preconec border-t  bg-gray-200 py-28 pt-2 dark:from-black dark:text-yellow-600 dark:to-indigo-950">
+        <div class="container mx-auto">
+            <div class="mt-10">
+                <h2 class="text-2xl float-left font-semibold pt-32">&copy; Hanafi Febriansyah | 2023 | Indonesia</h2>
+            </div>
+        </div>
+        <div class="saran container mx-auto">
+            <div class="flex flex-col">
+                <h2 class="text-lg font-semibold mb-4 text-white dark:text-yellow-400">Saran dan Kritik</h2>
+                <div class="saran-box">
+                    <form>
+                        <div class="mb-4">
+                            <label for="nama" class="text-white block dark:text-yellow-400">Nama</label>
+                            <input type="text" id="nama" name="nama" class="font-mono w-full border rounded-md px-3 py-2 focus:outline-none focus:border-blue-400">
+                        </div>
+                        <div class="mb-4">
+                            <label for="saran" class="block text-white dark:text-yellow-400">Saran atau Kritik</label>
+                            <textarea id="saran" name="saran" rows="2" class="w-full font-mono border rounded-md px-3 py-2 focus:outline-none focus:border-blue-400"></textarea>
+                        </div>
+                        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Kirim</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
     <script>
         const darkModeButton = document.getElementById('darkModeButton');
         const body = document.body;
@@ -150,4 +288,69 @@
         const sunIcon = document.getElementById('icon');
         icon.style.fontSize = '25px';
     </script>
+
+<!-- Add this script tag to your HTML file, preferably just before the closing </body> tag -->
+<!-- Add this script tag to your HTML file, preferably just before the closing </body> tag -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector("form");
+        const komentarContainer = document.querySelector(".komentar-container");
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const namaInput = document.getElementById("nama");
+            const saranInput = document.getElementById("saran");
+
+            let nama = namaInput.value;
+            let saran = saranInput.value;
+
+            // If the "Nama" field is empty, generate a username
+            if (nama.trim() === "") {
+                nama = "User" + Math.floor(Math.random() * 1000); // You can customize the generated username format
+            }
+
+            // Convert links to audio players
+            saran = saran.replace(/(https?:\/\/[^\s]+)/gi, function (match) {
+                return `<audio controls><source src="${match}" type="audio/mpeg">Your browser does not support the audio element.</audio>`;
+            });
+
+            // Check if the input contains "lorem" and replace it with lorem ipsum text
+            if (saran.toLowerCase().includes("lorem")) {
+                saran = saran.replace(/lorem/gi, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet ipsum ac libero condimentum mattis.");
+            }
+            if (saran.trim() === "") {
+                saran = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt a nisi rerum eum ut reprehenderit sed eos quidem, error odit laborum et quo unde, minus corrupti,"
+            }
+
+            // Create a new comment element
+            const komentarDiv = document.createElement("div");
+            komentarDiv.className = "komentar bg-white dark:bg-slate-800 p-2 rounded-md shadow-md max-w-lg";
+            
+            const namaPara = document.createElement("p");
+            namaPara.className = "text-blue-500 dark:text-purple-600 font-semibold mt-2";
+            namaPara.textContent = nama;
+            
+            const saranPara = document.createElement("p");
+            saranPara.className = "text-gray-800 dark:text-yellow-600";
+            saranPara.innerHTML = saran; // Use innerHTML to render the HTML content
+
+            komentarDiv.appendChild(namaPara);
+            komentarDiv.appendChild(saranPara);
+
+            // Insert the new comment element into the container
+            komentarContainer.appendChild(komentarDiv);
+
+            // Clear the input fields
+            namaInput.value = "";
+            saranInput.value = "";
+        });
+    });
+</script>
+
+
+
+    </div>
+    </body>
+
 </html>
