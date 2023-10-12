@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>belajar tailwindcss</title>
+    <!-- link icon -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewBox="0 0 24 24">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+      </svg>
+      
+    <!-- link google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
+    <ink rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+    <!-- script -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<!-- style&script -->
+<script>
+    tailwind.config = {
+    darkMode:"class",
+      theme: {
+        extend: {
+            spacing: {
+                13: '3.25rem',
+            },
+            fontFamily: {
+                preconec:['Silkscreen'],
+                ita:['Italianno'],
+                pc:['Pixelify Sans']
+            },
+        }
+      }
+    }
+  </script>
+<style type="text/tailwindcss">
+    #icon {
+    font-size: 25px; 
+    }
+</style>
+<!-- Bagian 1: Header -->
+<body> 
+    <div class="cursor-auto bg-gradient-to-r font-pc text-white from-indigo-400 to-blue-700 dark:from-black dark:text-yellow-600 dark:to-indigo-950">
+    <nav class="bg-gradient-to-r from-indigo-700 to-blue-700 backdrop-blur-md shadow-lg py-4 dark:from-black dark:text-yellow-600 dark:to-indigo-950">
+        <div class="container mx-auto">
+            <div class="flex justify-between items-center dark:text-yellow-600 ">
+                <h1 class="text-3xl text-white font-preconec  dark:text-yellow-600 pl-2">NAXZY STUDIO</h1>
+                <ul class="flex space-x-4 pr-2">
+                    <li class="text-[20px] text-white dark:text-yellow-600"><a href="#" class="hover:underline">Beranda</a></li>
+                    <li class="text-[20px] text-white dark:text-yellow-600"><a href="#" class="hover:underline">Tentang Kami</a></li>
+                    <li class="text-[20px] text-white dark:text-yellow-600"><a href="#" class="hover:underline">Layanan</a></li>
+                    <li class="text-[20px] text-white dark:text-yellow-600"><a href="#" class="hover:underline">Kontak</a></li>
+                    <button id="darkModeButton" onclick="toggleDarkMode()">
+                        <i id="icon" class="fas fa-sun"></i> 
+                    </button>
+                </button>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Bagian 2: inti-->
+    <!-- selector 1 -->
+    <section class="py-12 flex ">
+        <div class="container mx-11 m">
+            <img src="./img/ns.png" class="filter invert-0 dark:filter dark:invert w-56 h-56 float-right mr-32">
+            <h2 class="text-5xl font-preconec  font-semibold ml-16">NAXZY STUDIO</h2>
+            <p class=" mt-4 pt-4 text-2xl w-1/2 float-left ml-20">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quia, expedita molestiae ex natus magni saepe. Perferendis aliquam labore nobis.</p>
+            
+        </div>
+        <!-- selector 2 -->
+    </section>
+    <div class="flex justify-center mx-auto text-indigo-950  dark:text-yellow-600 ">
+        <section class="group relative transform hover:scale-110 bg-gradient-to-br from-purple-400 to-pink-400 dark:from-purple-800  dark:to-black py-8 pl-6 m-4 w-72 h-56 rounded-3xl shadow-2xl dark:shadow-slate-950 ">
+            <div class="container mx-auto">
+                <h2 class="text-2xl  font-semibold">Kenapa harus pilih kami? </h2>
+                <ul class="mt-4  list-inside list-disc">
+                    <li>Pengerjaan yang cepat</li>
+                <li>Menerima segala masukan</li>
+                <li>Mampu mengerjakan dengan cepat</li>
+            </ul>
+        </div>
+    </section>
+    <!-- selector 3 -->
+    <section class="group relative transform hover:scale-110 bg-gradient-to-tl from-cyan-500 to-green-300 dark:from-blue-900  dark:to-black py-8 pl-6 m-4 w-72 h-56 rounded-3xl shadow-2xl dark:shadow-slate-950">
+        <div class="container mx-auto">
+            <h2 class="text-2xl font-semibold">Keunggulan yang kami miliki</h2>
+            <ul class="mt-4  list-inside list-disc">
+                <li>Responsif</li>
+                <li>Optimisasi yang baik</li>
+                <li>Lebih cepat dan murah</li>
+            </ul>
+        </div>
+    </section>
+    <!-- selector 4 -->
+    <section class="group relative transform hover:scale-110 bg-gradient-to-bl from-pink-500 dark:from-fuchsia-600  dark:to-black py-8 pl-6 m-4 w-72 h-56 rounded-3xl shadow-2xl dark:shadow-slate-950">
+        <div class="container mx-auto ">
+            <h2 class="text-2xl font-semibold">Layanan Kami</h2>
+            <ul class="mt-4  list-inside list-disc">
+                <li>Pengembangan Web</li>
+                <li>Desain Grafis</li>
+                <li>Konsultasi Bisnis</li>
+            </ul>
+        </div>
+    </section>
+    <!-- selector 5 -->
+    <section class="group relative transform hover:scale-110 bg-gradient-to-br from-cyan-500 to-indigo-800 dark:from-black  dark:to-indigo-950 py-8 pl-6 m-4 w-72 h-56 rounded-3xl shadow-2xl dark:shadow-slate-950">
+        <div class="container mx-auto">
+            <h2 class="text-2xl font-semibold">Kontak Kami</h2>
+            <ul class="mt-4  list-inside list-disc">
+                <li><a href="#" class="hover:text-green-500">Whatsapp</a></li>
+                <li><a href="#" class="hover:text-blue-500">Facebook</a></li>
+                <li><a href="#" class="hover:text-purple-600">Instaghram</a></li>
+            </ul>
+        </div>
+    </section>
+    </div>
+    <!-- Bagian 5: Kontak -->
+    <!-- selector 6 -->
+    <section class="bg-gradient-to-r font-preconec border-t mt-20 bg-gray-200 py-28 pt-2 text-center dark:from-black dark:text-yellow-600 dark:to-indigo-950">
+        <div class="container mx-auto">
+
+          <div class="mt-10">
+            <h2 class="text-2xl font-semibold">&copy; Hanafi Febriansyah | 2023 | Indonesia</h2>
+          </div>
+        </div>
+      </section>
+    </div>
+    </body>
+    <script>
+        const darkModeButton = document.getElementById('darkModeButton');
+        const body = document.body;
+        const icon = document.getElementById('icon');
+ 
+        function toggleDarkMode() {
+            body.classList.toggle('dark');
+            const isDarkMode = body.classList.contains('dark');
+            if (isDarkMode) {
+                icon.className = "fas fa-moon"; 
+            } else {
+                icon.className = 'fas fa-sun';     
+                 }
+        }
+        const sunIcon = document.getElementById('icon');
+        icon.style.fontSize = '25px';
+    </script>
+</html>
