@@ -10,7 +10,10 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewBox="0 0 24 24">
         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
       </svg>
-      
+      <!-- link animasi -->
+      <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+      <!-- link AOC (animasi on scroll) -->
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- link google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -80,7 +83,7 @@
 <!-- Bagian 1: Header -->
 <body>
     <div class=" cursor-auto bg-gradient-to-r font-pc text-white from-indigo-400 to-blue-700 dark:from-black dark:text-yellow-600 dark:to-indigo-950">
-    <nav class="bg-gradient-to-r from-indigo-700 to-blue-700 shadow-lg py-4 dark:from-black dark:text-yellow-600 dark:to-indigo-950">
+    <nav  class="animate__animated animate__fadeInDown bg-gradient-to-r from-indigo-700 to-blue-700 shadow-lg py-4 dark:from-black dark:text-yellow-600 dark:to-indigo-950">
         <div class="container mx-auto">
             <div class="flex justify-between items-center dark:text-yellow-600 ">
                 <h1 class="text-3xl text-white font-preconec  dark:text-yellow-600 pl-2">NAXZY STUDIO</h1>
@@ -102,15 +105,15 @@
     <!-- selector 1 -->
     <section id="home" class="py-12 flex ">
         <div class="container mx-11 mr-32 mb-44 ">
-            <img src="./img/ns.png" class="pt-24 filter invert-0 dark:filter dark:invert w-56 h-70 float-right ">
-            <h2 class=" pt-24 text-5xl font-preconec  font-semibold ml-16">NAXZY STUDIO</h2>
-            <p class=" mt-4 pt-6 text-2xl w-1/2 float-left ml-20 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nisi saepe dolorum dignissimos a ullam magnam eius, accusantium minus temporibus, odit assumenda rem similique neque porro recusandae aut fugit eaque? ipsum dolor sit amet consectetur adipisicing elit. Deserunt quia, expedita molestiae ex natus magni saepe. Perferendis aliquam labore nobis.</p>
+            <img src="./img/ns.png" class="animate__animated animate__fadeInRight pt-24 filter invert-0 dark:filter dark:invert w-56 h-70 float-right ">
+            <h2 class="animate__animated animate__fadeInLeft pt-24 text-5xl font-preconec  font-semibold ml-16">NAXZY STUDIO</h2>
+            <p class="animate__animated animate__fadeInLeft mt-4 pt-6 text-2xl w-1/2 float-left ml-20 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nisi saepe dolorum dignissimos a ullam magnam eius, accusantium minus temporibus, odit assumenda rem similique neque porro recusandae aut fugit eaque? ipsum dolor sit amet consectetur adipisicing elit. Deserunt quia, expedita molestiae ex natus magni saepe. Perferendis aliquam labore nobis.</p>
         </div>
     </section>
     <!-- tentang kami -->
-    <div id="tk" class="card flex mx-auto px-48 pt-28 text-white dark:text-yellow-600 mb-44">
-        <section class="group1  dark:bg-indigo-950  absolute justify-center pl-10 transform w-[1200px] h-[600px] rounded-2xl shadow-2xl">
-          <div class="container  mx-auto">
+    <div id="tk"  class="card flex mx-auto px-48 pt-28 text-white dark:text-yellow-600 mb-44">
+        <section data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" class="group1  dark:bg-indigo-950  absolute justify-center pl-10 transform w-[1200px] h-[600px] rounded-2xl shadow-2xl">
+          <div  class="container  mx-auto">
             <img src="./img/ns.png" class="pt-44 pr-10 filter invert-0 dark:filter dark:invert w-60 h-90 float-right">
             <h2 class="text-7xl pt-60 float-left font-preconec font-semibold">Tentang Kami</h2>
             <p class="text-2xl float-left pb-20 mr-80 pt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut sunt unde eius illum officiis omnis quibusdam, architecto neque. Provident nemo error, nisi reprehenderit a officia quisquam asperiores cum mollitia velit.</p> 
@@ -120,8 +123,9 @@
       <div class="mx-auto w-1/2  mb-8"></div>
       <!-- Bagian 5: Kontak -->
       <!-- selector 2 -->
+      <div  data-aos="fade-up"data-aos-duration="1500"data-aos-anchor-placement="bottom-bottom">
       <div class="yaya flex justify-center mx-auto text-indigo-950 my-96 dark:text-yellow-600 pt-96 ">
-        <div id="haha" class=" border-cyan-300 border-0 absolute w-80 h-[600px] m-[-250px]"></div>
+          <div id="haha" class=" border-cyan-300 border-0 absolute w-80 h-[600px] m-[-250px]"></div>
           <section  class="group relative transform hover:scale-110 bg-gradient-to-br from-purple-400 to-pink-400 dark:from-purple-800 pt-20 dark:to-black py-8 pl-10 m-4 w-1/4 h-72 rounded-3xl shadow-2xl dark:shadow-slate-950 ">
               <div class="container mx-auto">
                   <h2 class="text-2xl  font-semibold">Kenapa harus pilih kami? </h2>
@@ -162,11 +166,12 @@
                   <li><a href="#" class="hover:text-green-500">Whatsapp</a></li>
                   <li><a href="#" class="hover:text-blue-500">Facebook</a></li>
                   <li><a href="#" class="hover:text-purple-600">Instaghram</a></li>
-              </ul>
-          </div>
-      </section>
-      </div>
-      <!-- <section>
+                </ul>
+            </div>
+        </section>
+    </div>
+</div>
+    <!-- <section>
         <div class="container mx-auto bg-gradient-to-br from-purple-600 to-indigo-500 w-[1300px] h-[600px] m-[-250px] p-5 rounded-xl shadow-xl  ">
             <div class="mt-10">
                 <div class="float-left">
@@ -209,10 +214,10 @@
       </section> -->
       <!-- selector 6 -->
       
-
-      <section>
-        <div id="kt" class=" border-cyan-300 border-0 absolute w-80 h-[600px] m-[-250px]"></div>
-        <div  class="container mx-auto p-6 mt-96">
+      <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+          <section>
+              <div  id="kt" class=" border-cyan-300 border-0 absolute w-80 h-[600px] m-[-250px]"></div>
+              <div  class="container mx-auto p-6 mt-96">
             <h1 class="text-3xl font-semibold mb-4"></h1>
             <div class="komentar-container items-center pl-20 ">
                 <!-- Komentar 1 -->
@@ -240,37 +245,52 @@
                     <p class="text-blue-500 dark:text-purple-600 font-semibold mt-2">John Doe</p>
                     <p class="text-gray-800 dark:text-yellow-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet ipsum ac libero condimentum mattis.</p>
                 </div>
+            </div>
                 
             </div>
         </div>
       </section>
       <section class="px-16 flex mt-96 bg-gradient-to-r font-preconec border-t  bg-gray-200 py-28 pt-2 dark:from-black dark:text-yellow-600 dark:to-indigo-950">
-        <div class="container mx-auto">
+        <div data-aos="fade-right" class="container mx-auto">
             <div class="mt-10">
                 <h2 class="text-2xl float-left font-semibold pt-32">&copy; Hanafi Febriansyah | 2023 | Indonesia</h2>
             </div>
         </div>
         <div class="saran container mx-auto">
             <div class="flex flex-col">
-                <h2 class="text-lg font-semibold mb-4 text-white dark:text-yellow-400">Saran dan Kritik</h2>
+                <h2 data-aos="fade-right" class="text-lg font-semibold mb-4 text-white dark:text-yellow-400">Saran dan Kritik</h2>
                 <div class="saran-box">
                     <form action="namSa.php" method="post">
-                        <div class="mb-4">
+                        <div data-aos="fade-left" class="mb-4">
                             <label for="nama" class="text-white block dark:text-yellow-400">Nama</label>
                             <input type="text" id="nama" name="nama" class="font-mono w-full border rounded-md px-3 py-2 focus:outline-none focus:border-blue-400">
                         </div>
-                        <div class="mb-4">
+                        <div data-aos="fade-left" class="mb-4">
                             <label for="saran" class="block text-white dark:text-yellow-400">Saran atau Kritik</label>
                             <textarea id="saran" name="saran" rows="2" class="w-full font-mono border rounded-md px-3 py-2 focus:outline-none focus:border-blue-400"></textarea>
                         </div>
-                        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Kirim</button>
+                        <div >
+                            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Kirim</button>
+                        </div>
                     </form>
                 </div>
             </div>
         </div>
     </section>
-    
-    
+    <!-- Aoc script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script>
+        AOS.init({
+          offset: 200, // Jarak dalam piksel dari elemen sebelumnya
+          duration: 800, // Durasi animasi dalam milidetik
+          easing: 'ease-in-out', // Jenis pergerakan (coba variasi lainnya)
+          once: false // Animasi hanya terjadi sekali
+        });
+      </script>
+      
     <script>
         const darkModeButton = document.getElementById('darkModeButton');
         const body = document.body;
@@ -344,7 +364,7 @@
             // Clear the input fields
             namaInput.value = "";
             saranInput.value = "";
-
+            //push to data base
             var xhr = new XMLHttpRequest();
             xhr.open("POST", "namSa.php", true);
             xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
