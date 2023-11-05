@@ -86,14 +86,14 @@
     <nav  class="animate__animated animate__fadeInDown bg-gradient-to-r from-indigo-700 to-blue-700 shadow-lg py-4 dark:from-black dark:text-yellow-600 dark:to-indigo-950">
         <div class="container mx-auto">
             <div class="flex justify-between items-center dark:text-yellow-600 ">
-                <h1 class="text-3xl text-white font-preconec  dark:text-yellow-600 pl-2">NAXZY STUDIO</h1>
+                <h1 class="text-3xl text-white font-preconec  animate__animated animate__fadeInLeft dark:text-yellow-600 pl-2">NAXZY STUDIO</h1>
                 <ul id="dinav" class="flex space-x-4 pr-2">
-                    <li class="text-[20px] text-white dark:text-yellow-600"><a href="#home" class="hover:underline">Beranda</a></li>
-                    <li class="text-[20px] text-white dark:text-yellow-600"><a href="#tk" class="hover:underline">Tentang Kami</a></li>
-                    <li class="text-[20px] text-white dark:text-yellow-600"><a href="#haha" class="hover:underline">Layanan</a></li>
-                    <li class="text-[20px] text-white dark:text-yellow-600"><a href="#kt" class="hover:underline">Komentar</a></li>
+                    <li class="text-[20px] animate__animated animate__fadeInRight text-white dark:text-yellow-600"><a href="#home" class="hover:underline">Beranda</a></li>
+                    <li class="text-[20px] animate__animated animate__fadeInRight text-white dark:text-yellow-600"><a href="#tk" class="hover:underline">Tentang Kami</a></li>
+                    <li class="text-[20px] animate__animated animate__fadeInRight text-white dark:text-yellow-600"><a href="#haha" class="hover:underline">Layanan</a></li>
+                    <li class="text-[20px] animate__animated animate__fadeInRight text-white dark:text-yellow-600"><a href="#kt" class="hover:underline">Komentar</a></li>
                     <button id="darkModeButton" onclick="toggleDarkMode()">
-                        <i id="icon" class="fas fa-sun"></i> 
+                        <i id="icon" class="animate__animated animate__fadeInRight fas fa-sun"></i> 
                     </button>
                 </button>
                 </ul>
@@ -260,14 +260,14 @@
             <div class="flex flex-col">
                 <h2 data-aos="fade-right" class="text-lg font-semibold mb-4 text-white dark:text-yellow-400">Saran dan Kritik</h2>
                 <div class="saran-box">
-                    <form action="namSa.php" method="post">
+                    <form method="POST">
                         <div data-aos="fade-left" class="mb-4">
                             <label for="nama" class="text-white block dark:text-yellow-400">Nama</label>
-                            <input type="text" id="nama" name="nama" class="font-mono w-full border rounded-md px-3 py-2 focus:outline-none focus:border-blue-400">
+                            <input type="email" id="nama" name="email" class="font-mono w-full border rounded-md px-3 py-2 focus:outline-none focus:border-blue-400">
                         </div>
                         <div data-aos="fade-left" class="mb-4">
                             <label for="saran" class="block text-white dark:text-yellow-400">Saran atau Kritik</label>
-                            <textarea id="saran" name="saran" rows="2" class="w-full font-mono border rounded-md px-3 py-2 focus:outline-none focus:border-blue-400"></textarea>
+                            <textarea id="saran" name="message" rows="2" class="w-full font-mono border rounded-md px-3 py-2 focus:outline-none focus:border-blue-400"></textarea>
                         </div>
                         <div >
                             <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Kirim</button>
@@ -277,6 +277,7 @@
             </div>
         </div>
     </section>
+
     <!-- Aoc script -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
@@ -290,7 +291,52 @@
           once: false // Animasi hanya terjadi sekali
         });
       </script>
-      
+      <!-- email script -->
+      <script>
+        var form = document.getElementById("my-form");
+        
+        async function handleSubmit(event) {
+          event.preventDefault();
+          var status = document.getElementById("my-form-status");
+          var data = new FormData(event.target);
+          fetch(event.target.action, {
+            method: form.method,
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+          }).then(response => {
+            if (response.ok) {
+              status.innerHTML = "Thanks for your submission!";
+              form.reset()
+            } else {
+              response.json().then(data => {
+                if (Object.hasOwn(data, 'errors')) {
+                  status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                } else {
+                  status.innerHTML = "Oops! There was a problem submitting your form"
+                }
+              })
+            }
+          }).catch(error => {
+            status.innerHTML = "Oops! There was a problem submitting your form"
+          });
+        }
+        form.addEventListener("submit", handleSubmit)
+    </script>
+<script>
+    // Temukan elemen input email
+    const emailInput = document.querySelector('input[name="email"]');
+
+    // Tambahkan event listener untuk memodifikasi input saat kehilangan fokus (blur)
+    emailInput.addEventListener('blur', function() {
+        // Periksa apakah input email tidak mengandung "@gmail.com"
+        if (emailInput.value.indexOf('@') === -1) {
+            // Tambahkan "@gmail.com" jika tidak ada
+            emailInput.value += "@gmail.com";
+        }
+    });
+</script>
     <script>
         const darkModeButton = document.getElementById('darkModeButton');
         const body = document.body;
@@ -346,11 +392,11 @@
             // Create a new comment element
             const komentarDiv = document.createElement("div");
             komentarDiv.className = "komentar bg-white dark:bg-slate-800 p-2 rounded-md shadow-md max-w-lg";
-            
+
             const namaPara = document.createElement("p");
             namaPara.className = "text-blue-500 dark:text-purple-600 font-semibold mt-2";
             namaPara.textContent = nama;
-            
+
             const saranPara = document.createElement("p");
             saranPara.className = "text-gray-800 dark:text-yellow-600";
             saranPara.innerHTML = saran; // Use innerHTML to render the HTML content
@@ -364,20 +410,37 @@
             // Clear the input fields
             namaInput.value = "";
             saranInput.value = "";
-            //push to data base
-            var xhr = new XMLHttpRequest();
-            xhr.open("POST", "namSa.php", true);
-            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState == 4 && xhr.status == 200) {
-                    var response = xhr.responseText;
-                    document.getElementById("result").innerHTML = response;
+
+            // Push toFormspree
+            var xhrFormspree = new XMLHttpRequest();
+            xhrFormspree.open("POST", "https://formspree.io/f/mjvqzojw", true);
+            xhrFormspree.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhrFormspree.onreadystatechange = function () {
+                if (xhrFormspree.readyState == 4 && xhrFormspree.status == 200) {
+                    // Success, do something if needed
+                    console.log("Data sent to Formspree successfully.");
                 }
             };
-            xhr.send("nama=" + nama + "&saran=" + saran);
+            var dataFormspree = "email=" + encodeURIComponent(nama) + "&message=" + encodeURIComponent(saran);
+            xhrFormspree.send(dataFormspree);
+
+            // Push to database (namSa.php)
+            var xhrLocal = new XMLHttpRequest();
+            xhrLocal.open("POST", "namSa.php", true);
+            xhrLocal.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhrLocal.onreadystatechange = function () {
+                if (xhrLocal.readyState == 4 && xhrLocal.status == 200) {
+                    // Success, do something if needed
+                    console.log("Data sent to namSa.php successfully.");
+                }
+            };
+            var dataLocal = "email=" + encodeURIComponent(nama) + "&message=" + encodeURIComponent(saran);
+            xhrLocal.send(dataLocal);
         });
     });
 </script>
+
+ 
 
 
 
