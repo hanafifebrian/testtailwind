@@ -82,7 +82,7 @@
 </style>
 <!-- Bagian 1: Header -->
 <body>
-    <div class=" cursor-auto bg-gradient-to-r font-pc text-white from-indigo-400 to-blue-700 dark:from-black dark:text-yellow-600 dark:to-indigo-950">
+    <div class="cursor-auto w-full h-full bg-gradient-to-r font-pc text-white from-indigo-400 to-blue-700 dark:from-black dark:text-yellow-600 dark:to-indigo-950">
     <nav  class="animate__animated animate__fadeInDown bg-gradient-to-r from-indigo-700 to-blue-700 shadow-lg py-4 dark:from-black dark:text-yellow-600 dark:to-indigo-950">
         <div class="container mx-auto">
             <div class="flex justify-between items-center dark:text-yellow-600 ">
@@ -90,7 +90,9 @@
                 <ul id="dinav" class="flex space-x-4 pr-2">
                     <li class="text-[20px] animate__animated animate__fadeInRight text-white dark:text-yellow-600"><a href="#home" class="hover:underline">Beranda</a></li>
                     <li class="text-[20px] animate__animated animate__fadeInRight text-white dark:text-yellow-600"><a href="#tk" class="hover:underline">Tentang Kami</a></li>
+                    <li class="text-[20px] animate__animated animate__fadeInRight text-white dark:text-yellow-600"><a href="#sk" class="hover:underline">Informasi</a></li>
                     <li class="text-[20px] animate__animated animate__fadeInRight text-white dark:text-yellow-600"><a href="#haha" class="hover:underline">Layanan</a></li>
+                    <li class="text-[20px] animate__animated animate__fadeInRight text-white dark:text-yellow-600"><a href="#tm" class="hover:underline">Student</a></li>
                     <li class="text-[20px] animate__animated animate__fadeInRight text-white dark:text-yellow-600"><a href="#kt" class="hover:underline">Komentar</a></li>
                     <button id="darkModeButton" onclick="toggleDarkMode()">
                         <i id="icon" class="animate__animated animate__fadeInRight fas fa-sun"></i> 
@@ -102,8 +104,9 @@
     </nav>
   
     <!-- Bagian 2: inti-->
+    
     <!-- selector 1 -->
-    <section id="home" class="py-12 flex ">
+    <section id="home" class="py-32 flex ">
         <div class="container mx-11 mr-32 mb-44 ">
             <img src="./img/ns.png" class="animate__animated animate__fadeInRight pt-24 filter invert-0 dark:filter dark:invert w-56 h-70 float-right ">
             <h2 class="animate__animated animate__fadeInLeft pt-24 text-5xl font-preconec  font-semibold ml-16">NAXZY STUDIO</h2>
@@ -118,13 +121,25 @@
             <h2 class="text-7xl pt-60 float-left font-preconec font-semibold">Tentang Kami</h2>
             <p class="text-2xl float-left pb-20 mr-80 pt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut sunt unde eius illum officiis omnis quibusdam, architecto neque. Provident nemo error, nisi reprehenderit a officia quisquam asperiores cum mollitia velit.</p> 
         </div>
-        </section>
-      </div>
-      <div class="mx-auto w-1/2  mb-8"></div>
+    </section>
+</div>
+
+<div class="mx-auto w-1/2  mb-8"></div>
+<div  id="sk" class=" border-cyan-300  mt-[850px] border-0 absolute w-80 h-[700px] m-[-250px]"></div>
+<div class="card absolute mx-auto px-52 mt-[960px] text-white dark:text-yellow-600 mb-44">
+    <section data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine" class="group1  dark:bg-indigo-950  absolute justify-center pl-10 transform w-[1200px] h-[600px] rounded-2xl shadow-2xl">
+        <div  class="container  mx-auto">
+          <img src="https://binus.ac.id/knowledge/wp-content/uploads/2020/12/headlesscms.png" class=" pt-36 pr-10 filter invert-0 dark:filter dark:invert w-[400px] h-96 float-right">
+          <h2 class="text-7xl pt-56 float-left font-preconec font-semibold">Informasi</h2>
+          <p class="text-2xl float-left pb-20 mr-80 absolute pt-80 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut sunt unde eius illum officiis omnis quibusdam, architecto neque. Provident nemo error, nisi reprehenderit a officia quisquam asperiores cum mollitia velit.</p> 
+          <button type="submit" class="bg-blue-500 p-4 text-white mt-[510px] -mx-[440px] absolute rounded-3xl hover:bg-blue-600"><a href="#tm" class="px-4 py-2">Lihat</a></button>
+        </div>
+  </section>
+</div>
       <!-- Bagian 5: Kontak -->
       <!-- selector 2 -->
-      <div  data-aos="fade-up"data-aos-duration="1500"data-aos-anchor-placement="bottom-bottom">
-      <div class="yaya flex justify-center mx-auto text-indigo-950 my-96 dark:text-yellow-600 pt-96 ">
+
+      <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" class="yaya flex justify-center mx-auto text-indigo-950 my-[1200px] dark:text-yellow-600 pt-96 ">
           <div id="haha" class=" border-cyan-300 border-0 absolute w-80 h-[600px] m-[-250px]"></div>
           <section  class="group relative transform hover:scale-110 bg-gradient-to-br from-purple-400 to-pink-400 dark:from-purple-800 pt-20 dark:to-black py-8 pl-10 m-4 w-1/4 h-72 rounded-3xl shadow-2xl dark:shadow-slate-950 ">
               <div class="container mx-auto">
@@ -137,18 +152,18 @@
           </div>
       </section>
       <!-- selector 3 -->
-      <section class="group relative transform hover:scale-110 bg-gradient-to-tl from-cyan-500 to-green-300 dark:from-blue-900 pt-20 dark:to-black py-8 pl-10 m-4 w-1/4 h-72 rounded-3xl shadow-2xl dark:shadow-slate-950">
+      <section data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine" class="group relative transform hover:scale-110 bg-gradient-to-tl from-cyan-500 to-green-300 dark:from-blue-900 pt-20 dark:to-black py-8 pl-10 m-4 w-1/4 h-72 rounded-3xl shadow-2xl dark:shadow-slate-950">
           <div class="container mx-auto">
               <h2 class="text-2xl font-semibold">Keunggulan yang kami miliki</h2>
               <ul class="mt-4 text-1xl list-inside list-disc">
-                  <li>Responsif</li>
+                  <li>Rapi</li>
                   <li>Optimisasi yang baik</li>
                   <li>Lebih cepat dan murah</li>
               </ul>
           </div>
       </section>
       <!-- selector 4 -->
-      <section class="group relative transform hover:scale-110 bg-gradient-to-bl from-pink-500 dark:from-fuchsia-600 pt-20 dark:to-black py-8 pl-10 m-4 w-1/4 rounded-3xl shadow-2xl dark:shadow-slate-950">
+      <section data-aos="fade-down" data-aos-offset="300" data-aos-easing="ease-in-sine" class="group relative transform hover:scale-110 bg-gradient-to-bl from-pink-500 dark:from-fuchsia-600 pt-20 dark:to-black py-8 pl-10 m-4 w-1/4 rounded-3xl shadow-2xl dark:shadow-slate-950">
           <div class="container mx-auto ">
               <h2 class="text-2xl font-semibold">Layanan Kami</h2>
               <ul class="mt-4 text-1xl list-inside list-disc">
@@ -159,7 +174,7 @@
           </div>
       </section>
       <!-- selector 5 -->
-      <section class="group relative transform hover:scale-110 bg-gradient-to-br from-cyan-500 to-indigo-800 pt-20   dark:from-black  darkpt-20:to-indigo-950 py-8 pl-10 m-4 w-1/4 rounded-3xl shadow-2xl dark:shadow-slate-950">
+      <section data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" class="group relative transform hover:scale-110 bg-gradient-to-br from-cyan-500 to-indigo-800 pt-20   dark:from-black  darkpt-20:to-indigo-950 py-8 pl-10 m-4 w-1/4 rounded-3xl shadow-2xl dark:shadow-slate-950">
           <div class="container mx-auto">
               <h2 class="text-2xl font-semibold">Kontak Kami</h2>
               <ul class="mt-4 text-1xl list-inside list-disc">
@@ -170,48 +185,24 @@
             </div>
         </section>
     </div>
+
+<div  id="tm" class=" border-cyan-300  -mt-[920px] border-0 absolute w-80 h-[700px] m-[-250px]"></div>
+<div class="card absolute mx-auto pl-0 -mt-[800px] text-white dark:text-yellow-600 mb-44">
+    <section data-aos="fade-down" data-aos-offset="300" data-aos-easing="ease-in-sine" class="group1  dark:bg-indigo-950  absolute justify-center pl-10 transform w-[1000px] h-[600px] rounded-2xl shadow-2xl">
+        <div class="hover:scale-110" >
+            <img src="https://blog.cnt.id/wp-content/uploads/2023/01/backend.jpeg" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" class="absolute  mt-[50px] ml-[800px] transform w-[350px] h-[200px] rounded-2xl shadow-2xl"></img>
+            <P data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" class="group1 py-5 pl-2 text-2xl absolute  mt-[100px] ml-[590px] transform w-[300px] h-[80px]  rounded-2xl shadow-2xl">BACK END DEVELOPER</P>
+        </div>
+        <div class="hover:scale-110">
+            <img data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" src="https://storage.googleapis.com/ureify-strapi-assets/Job_Search_for_Front_End_Developer_b8b113ec25/Job_Search_for_Front_End_Developer_b8b113ec25.jpg" class="absolute  mt-[300px] ml-[800px] transform w-[350px] h-[200px] rounded-2xl shadow-2xl"></img>
+            <P data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" class="group1 py-5 pl-2 text-2xl absolute  mt-[370px] ml-[590px] transform w-[300px] h-[80px]  rounded-2xl shadow-2xl">FRONT END DEVELOPER</P>
+        </div>
+        <div  class="container  mx-auto">
+            <h2 class="text-7xl pt-60 float-left font-preconec font-semibold">Student</h2>
+            <p class="text-2xl float-left pb-20 mr-80 pt-2">Kamu juga bisa belajar disini lho,kamu bisa memilih 2 pilihan yang ada disamping.</p> 
+        </div>
+    </section>
 </div>
-    <!-- <section>
-        <div class="container mx-auto bg-gradient-to-br from-purple-600 to-indigo-500 w-[1300px] h-[600px] m-[-250px] p-5 rounded-xl shadow-xl  ">
-            <div class="mt-10">
-                <div class="float-left">
-                    <h1 class="pl-10 pt-14 text-3xl font-semibold absolute">KEAHLIAN YANG KITA MILIKI</h1>
-                    <div class="relative text-9xl py-32 pl-20">
-                        <i class="fa-duotone fa-code fa-2xl" style="--fa-primary-color: #1b1c1d; --fa-secondary-color: #0557e6;"></i>
-                    </div>
-                </div>
-                <div class="pl-[70%] float-none justify-center items-center ">
-                     
-                    <div class="group relative w-[20%] hover:w-1/2 pb-3 hover:py-3 ">
-                        <h2 class="pl-3 text-3xl">HTML</h2>
-                        <div class="bg-blue-500 text-center text-white p-4 rounded-md transition-transform transform hover:scale-105 hover:shadow-md">
-                            <i class="fab fa-html5 text-3xl"></i>
-                        </div>
-                        <div class=" rounded-b-lg top-0 left-0 right-0 bottom-0 bg-blue-500 bg-opacity-70 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                            <p class="text-2xl">90% Menguasai</p>
-                        </div>
-                    </div>
-    
-                    
-                    <div class="group relative w-1/5 hover:w-1/2 pb-3 hover:py-3">
-                        <h2 class="pl-3 text-3xl">CSS</h2>
-                        <div class="text-center bg-green-500 text-white p-4 rounded-md transition-transform transform hover:scale-105 hover:shadow-md">
-                            <i class="fab fa-css3 text-3xl"></i>
-                        </div>
-                        <div class="rounded-b-lg top-0 left-0 right-0 bottom-0 bg-green-500 bg-opacity-70 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                            <p class="text-2xl">80% Menguasai</p>
-                        </div>
-                    </div>
-                    <div class="group relative w-1/5 hover:w-1/2 pb-3 hover:py-3">
-                        <h2 class="pl-3 text-3xl">TailwindCss<h2>
-                        <div class="text-center bg-red-500 text-white p-4 rounded-md transition-transform transform hover:scale-105 hover:shadow-md">
-                            <i class="fa-solid fa-water fa-bounce text-3xl"></i>
-                        </div>
-                        <div class=" rounded-b-lg top-0 left-0 right-0 bottom-0 bg-red-500 bg-opacity-70 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                            <p class="text-2xl">50% Menguasai</p>
-                        </div>
-                    </div>
-      </section> -->
       <!-- selector 6 -->
       
       <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
@@ -258,7 +249,7 @@
         </div>
         <div class="saran container mx-auto">
             <div class="flex flex-col">
-                <h2 data-aos="fade-right" class="text-lg font-semibold mb-4 text-white dark:text-yellow-400">Saran dan Kritik</h2>
+                <h2 data-aos="fade-right" class="text-lg font-semibold mb-4 text-white dark:text-yellow-400">Kontak Admin</h2>
                 <div class="saran-box">
                     <form method="POST">
                         <div data-aos="fade-left" class="mb-4">
@@ -333,7 +324,7 @@
         // Periksa apakah input email tidak mengandung "@gmail.com"
         if (emailInput.value.indexOf('@') === -1) {
             // Tambahkan "@gmail.com" jika tidak ada
-            emailInput.value += "@gmail.com";
+            emailInput.value += "@Naxzy.com";
         }
     });
 </script>
