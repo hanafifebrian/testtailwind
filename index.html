@@ -291,6 +291,19 @@
           once: false // Animasi hanya terjadi sekali
         });
       </script>
+      <script>
+        // Temukan elemen input email
+        const emailInput = document.querySelector('input[name="email"]');
+    
+        // Tambahkan event listener untuk memodifikasi input saat kehilangan fokus (blur)
+        emailInput.addEventListener('blur', function() {
+            // Periksa apakah input email tidak mengandung "@gmail.com"
+            if (emailInput.value.indexOf('@') === -1) {
+                // Tambahkan "@gmail.com" jika tidak ada
+                emailInput.value += "@Naxzy.com";
+            }
+        });
+    </script>
       <!-- email script -->
       <script>
         var form = document.getElementById("my-form");
@@ -388,33 +401,35 @@
         namaInput.value = "";
         saranInput.value = "";
 
-        // Kirim ke Formspree
-        var xhrFormspree = new XMLHttpRequest();
-        xhrFormspree.open("POST", "https://formspree.io/f/mjvqzojw", true);
-        xhrFormspree.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        xhrFormspree.onreadystatechange = function () {
-            if (xhrFormspree.readyState == 4 && xhrFormspree.status == 200) {
-                // Sukses, lakukan sesuatu jika diperlukan
-                console.log("Data berhasil dikirimkan ke Formspree.");
-            }
-        };
-        var dataFormspree = "email=" + encodeURIComponent(nama) + "&message=" + encodeURIComponent(saran);
-        xhrFormspree.send(dataFormspree);
+        
+            // Push toFormspree
+            var xhrFormspree = new XMLHttpRequest();
+            xhrFormspree.open("POST", "https://formspree.io/f/mjvqzojw", true);
+            xhrFormspree.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhrFormspree.onreadystatechange = function () {
+                if (xhrFormspree.readyState == 4 && xhrFormspree.status == 200) {
+                    // Success, do something if needed
+                    console.log("Data sent to Formspree successfully.");
+                }
+            };
+            var dataFormspree = "email=" + encodeURIComponent(nama) + "&message=" + encodeURIComponent(saran);
+            xhrFormspree.send(dataFormspree);
 
-        // Kirim ke database (namSa.php)
-        var xhrLocal = new XMLHttpRequest();
-        xhrLocal.open("POST", "namSa.php", true);
-        xhrLocal.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        xhrLocal.onreadystatechange = function () {
-            if (xhrLocal.readyState == 4 && xhrLocal.status == 200) {
-                // Sukses, lakukan sesuatu jika diperlukan
-                console.log("Data berhasil dikirimkan ke namSa.php.");
-            }
-        };
-        var dataLocal = "email=" + encodeURIComponent(nama) + "&message=" + encodeURIComponent(saran);
-        xhrLocal.send(dataLocal);
+            // Push to database (namSa.php)
+            var xhrLocal = new XMLHttpRequest();
+            xhrLocal.open("POST", "namSa.php", true);
+            xhrLocal.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhrLocal.onreadystatechange = function () {
+                if (xhrLocal.readyState == 4 && xhrLocal.status == 200) {
+                    // Success, do something if needed
+                    console.log("Data sent to namSa.php successfully.");
+                }
+            };
+            var dataLocal = "email=" + encodeURIComponent(nama) + "&message=" + encodeURIComponent(saran);
+            xhrLocal.send(dataLocal);
+        });
     });
-});
+
 
 </script>
  
